@@ -1,0 +1,74 @@
+selection:
+   ### use `&`, `|`, `~` for logical operations on numpy arrays
+   ### can use functions from `math`, `np` (numpy), and `awkward` in the expression
+
+
+preprocess:
+  ### method: [manual, auto] - whether to use manually specified parameters for variable standardization
+  method: manual
+  ### data_fraction: fraction of events to use when calculating the mean/scale for the standardization
+  data_fraction: 0.5
+  
+  # Add custom processing step
+  custom:
+    module: jet_image_preprocessing  # Name of your module
+    function: create_jet_images  # Function to call
+    config:
+      npix: 33  # Image dimensions
+      radius: 0.8  # Jet radius
+      channel_config:
+        pt:
+          preprocess: log
+          clip_percentile: 99.5
+          normalize: true
+        energy:
+          preprocess: log
+          clip_percentile: 99.5
+          normalize: true
+        d0val:
+          preprocess: log_epsilon
+          normalize: true
+        charge:
+          preprocess: none
+          normalize: false
+        isChargedHadron:
+          preprocess: none
+          normalize: false
+        isNeutralHadron:
+          preprocess: none
+          normalize: false
+        isPhoton:
+          preprocess: none
+          normalize: false
+
+inputs:
+  # Add jet_images as input
+  jet_images:
+    shape: [14, 33, 33]  # [channels, height, width]
+    dtype: float32
+    description: Multi-channel jet images
+
+
+labels:
+   ### type can be `simple`, `custom`
+   ### [option 1] use `simple` for binary/multi-class classification, then `value` is a list of 0-1 labels
+   type: simple
+   value: [label_QCD, label_Hbb, label_Hcc, label_Hgg, label_H4q, label_Hqql, label_Zqq, label_Wqq, label_Tbqq, label_Tbl]
+   ### [option 2] otherwise use `custom` to define the label, then `value` is a map
+   # type: custom
+   # value: 
+   #    truth_label: label.argmax(1)
+
+observers:
+   - jet_pt
+   - jet_eta
+   - jet_phi
+   - jet_energy
+   - jet_nparticles
+   - jet_sdmass
+   - jet_tau1
+   - jet_tau2
+   - jet_tau3
+   - jet_tau4
+
+weights:
