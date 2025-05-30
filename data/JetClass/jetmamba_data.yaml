@@ -1,0 +1,58 @@
+# data/jetmamba_data.yaml
+
+# Optional event selection cuts
+selection:
+  jet_pt: [20, -1]      # jet pT > 20 GeV
+  jet_eta: [-2.5, 2.5]  # |eta| < 2.5
+
+# Define new variables (computed from existing ones)
+new_variables:
+  jet_logpt: log(jet_pt)
+  part_rel_pt: part_pt / jet_pt
+
+# Input configuration - this is the key part
+inputs:
+  # For JetVision-Mamba, we need to preprocess to jet images
+  # Since Weaver doesn't have built-in jet image creation,
+  # you'll need to either:
+  # 1. Preprocess data to images beforehand, or
+  # 2. Use particle-level inputs and reshape in the model
+  
+  # Option 1: If you preprocess to images first
+  #jet_images:
+  #  length: null  # Will be auto-determined
+  #  vars: [jet_image_ch0, jet_image_ch1, jet_image_ch2, ...]  # Pre-computed channels
+    
+  # Option 2: Use particle-level inputs (recommended)
+  particles:
+    length: 100  # Max particles per jet
+    vars: 
+      - part_pt
+      - part_eta  
+      - part_phi
+      - part_energy
+      - part_charge
+      - part_d0val
+      - part_dzval
+      - part_isChargedHadron
+      - part_isNeutralHadron
+      - part_isPhoton
+      - part_isElectron
+      - part_isMuon
+    preprocessing:
+      - normalize
+      - pad
+
+# Labels for classification  
+labels:
+  jet_class:
+    var_names: [label_QCD, label_Hbb, label_Hcc, label_Hgg, label_H4q, 
+                label_Hqql, label_Zqq, label_Wqq, label_Tbqq, label_Tbl]
+
+# Additional variables to save (not used for training)
+observers:
+  - jet_pt
+  - jet_eta  
+  - jet_phi
+  - jet_mass
+"""
