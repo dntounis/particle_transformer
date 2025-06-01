@@ -1,5 +1,5 @@
 """
-JetMamba Model v4 - FULLY OPTIMIZED with Official Mamba + 2DMamba Kernels
+JetMamba Model v5 - FULLY OPTIMIZED with Official Mamba + 2DMamba Kernels
 Expected 40-80x speedup by replacing inefficient custom SSM with optimized implementations
 """
 
