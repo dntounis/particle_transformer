@@ -1,0 +1,1192 @@
+{
+  "metadata": {
+    "sequence_lengths": [
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "warmup_iters": 10,
+    "timed_iters": 50,
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "gpu_memory_gb": 39.4,
+    "torch_version": "2.2.0",
+    "cuda_version": "11.8",
+    "timestamp": "2026-05-13 20:43:02"
+  },
+  "models": {
+    "jetmamba_unidir": {
+      "name": "JetMamba-UniDir",
+      "variant": "v1.1",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 185.6588,
+            "std_ms": 4.3529,
+            "per_jet_us": 362.615
+          },
+          "embedding": {
+            "mean_ms": 0.5945,
+            "std_ms": 0.0895,
+            "per_jet_us": 1.161
+          },
+          "positional_encoding": {
+            "mean_ms": 0.3559,
+            "std_ms": 0.0457,
+            "per_jet_us": 0.695
+          },
+          "core_blocks": {
+            "mean_ms": 11.0291,
+            "std_ms": 0.1096,
+            "per_jet_us": 21.541
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2471,
+            "std_ms": 0.0277,
+            "per_jet_us": 0.483
+          },
+          "total": {
+            "mean_ms": 196.5397,
+            "std_ms": 2.4351,
+            "per_jet_us": 383.867
+          },
+          "coverage_pct": 100.7
+        },
+        "64": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.0653,
+            "std_ms": 3.367,
+            "per_jet_us": 363.409
+          },
+          "embedding": {
+            "mean_ms": 0.8843,
+            "std_ms": 0.0722,
+            "per_jet_us": 1.727
+          },
+          "positional_encoding": {
+            "mean_ms": 0.3927,
+            "std_ms": 0.0251,
+            "per_jet_us": 0.767
+          },
+          "core_blocks": {
+            "mean_ms": 11.8195,
+            "std_ms": 0.1839,
+            "per_jet_us": 23.085
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2599,
+            "std_ms": 0.0704,
+            "per_jet_us": 0.508
+          },
+          "total": {
+            "mean_ms": 197.6232,
+            "std_ms": 2.3036,
+            "per_jet_us": 385.983
+          },
+          "coverage_pct": 100.9
+        },
+        "128": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.886,
+            "std_ms": 2.7542,
+            "per_jet_us": 365.012
+          },
+          "embedding": {
+            "mean_ms": 1.5643,
+            "std_ms": 0.0376,
+            "per_jet_us": 3.055
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5908,
+            "std_ms": 0.0196,
+            "per_jet_us": 1.154
+          },
+          "core_blocks": {
+            "mean_ms": 11.8087,
+            "std_ms": 0.0207,
+            "per_jet_us": 23.064
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2414,
+            "std_ms": 0.0148,
+            "per_jet_us": 0.471
+          },
+          "total": {
+            "mean_ms": 204.6494,
+            "std_ms": 7.2028,
+            "per_jet_us": 399.706
+          },
+          "coverage_pct": 98.3
+        },
+        "256": {
+          "batch_size": 256,
+          "preprocessing": {
+            "mean_ms": 94.1403,
+            "std_ms": 2.117,
+            "per_jet_us": 367.736
+          },
+          "embedding": {
+            "mean_ms": 1.5592,
+            "std_ms": 0.0345,
+            "per_jet_us": 6.091
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5922,
+            "std_ms": 0.039,
+            "per_jet_us": 2.313
+          },
+          "core_blocks": {
+            "mean_ms": 9.4665,
+            "std_ms": 0.0359,
+            "per_jet_us": 36.978
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2535,
+            "std_ms": 0.0712,
+            "per_jet_us": 0.99
+          },
+          "total": {
+            "mean_ms": 105.1313,
+            "std_ms": 0.997,
+            "per_jet_us": 410.669
+          },
+          "coverage_pct": 100.8
+        },
+        "512": {
+          "batch_size": 128,
+          "preprocessing": {
+            "mean_ms": 46.8333,
+            "std_ms": 0.3813,
+            "per_jet_us": 365.885
+          },
+          "embedding": {
+            "mean_ms": 1.5543,
+            "std_ms": 0.0325,
+            "per_jet_us": 12.143
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5884,
+            "std_ms": 0.0284,
+            "per_jet_us": 4.597
+          },
+          "core_blocks": {
+            "mean_ms": 9.2963,
+            "std_ms": 0.0396,
+            "per_jet_us": 72.627
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2583,
+            "std_ms": 0.1213,
+            "per_jet_us": 2.018
+          },
+          "total": {
+            "mean_ms": 58.2771,
+            "std_ms": 0.3494,
+            "per_jet_us": 455.29
+          },
+          "coverage_pct": 100.4
+        },
+        "1024": {
+          "batch_size": 64,
+          "preprocessing": {
+            "mean_ms": 23.6324,
+            "std_ms": 0.3021,
+            "per_jet_us": 369.257
+          },
+          "embedding": {
+            "mean_ms": 1.5475,
+            "std_ms": 0.0311,
+            "per_jet_us": 24.18
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5705,
+            "std_ms": 0.013,
+            "per_jet_us": 8.914
+          },
+          "core_blocks": {
+            "mean_ms": 9.2756,
+            "std_ms": 0.0294,
+            "per_jet_us": 144.931
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2414,
+            "std_ms": 0.0929,
+            "per_jet_us": 3.772
+          },
+          "total": {
+            "mean_ms": 34.997,
+            "std_ms": 1.3355,
+            "per_jet_us": 546.828
+          },
+          "coverage_pct": 100.8
+        }
+      }
+    },
+    "jetmamba_bidir": {
+      "name": "JetMamba-BiDir",
+      "variant": "v1.2",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 189.315,
+            "std_ms": 4.7207,
+            "per_jet_us": 369.756
+          },
+          "embedding": {
+            "mean_ms": 0.5793,
+            "std_ms": 0.0711,
+            "per_jet_us": 1.131
+          },
+          "positional_encoding": {
+            "mean_ms": 0.3553,
+            "std_ms": 0.0269,
+            "per_jet_us": 0.694
+          },
+          "core_blocks": {
+            "mean_ms": 21.6015,
+            "std_ms": 0.1087,
+            "per_jet_us": 42.19
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2418,
+            "std_ms": 0.011,
+            "per_jet_us": 0.472
+          },
+          "total": {
+            "mean_ms": 206.814,
+            "std_ms": 1.2705,
+            "per_jet_us": 403.934
+          },
+          "coverage_pct": 102.6
+        },
+        "64": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 185.8295,
+            "std_ms": 1.0321,
+            "per_jet_us": 362.948
+          },
+          "embedding": {
+            "mean_ms": 0.8519,
+            "std_ms": 0.0463,
+            "per_jet_us": 1.664
+          },
+          "positional_encoding": {
+            "mean_ms": 0.3792,
+            "std_ms": 0.0169,
+            "per_jet_us": 0.741
+          },
+          "core_blocks": {
+            "mean_ms": 23.8663,
+            "std_ms": 0.0483,
+            "per_jet_us": 46.614
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2443,
+            "std_ms": 0.0464,
+            "per_jet_us": 0.477
+          },
+          "total": {
+            "mean_ms": 210.6483,
+            "std_ms": 1.7731,
+            "per_jet_us": 411.422
+          },
+          "coverage_pct": 100.2
+        },
+        "128": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 185.5123,
+            "std_ms": 2.0426,
+            "per_jet_us": 362.329
+          },
+          "embedding": {
+            "mean_ms": 1.5614,
+            "std_ms": 0.0366,
+            "per_jet_us": 3.05
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5879,
+            "std_ms": 0.0181,
+            "per_jet_us": 1.148
+          },
+          "core_blocks": {
+            "mean_ms": 24.7578,
+            "std_ms": 0.0649,
+            "per_jet_us": 48.355
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2334,
+            "std_ms": 0.0104,
+            "per_jet_us": 0.456
+          },
+          "total": {
+            "mean_ms": 217.0065,
+            "std_ms": 7.0396,
+            "per_jet_us": 423.841
+          },
+          "coverage_pct": 98.0
+        },
+        "256": {
+          "batch_size": 256,
+          "preprocessing": {
+            "mean_ms": 92.7547,
+            "std_ms": 0.5498,
+            "per_jet_us": 362.323
+          },
+          "embedding": {
+            "mean_ms": 1.5551,
+            "std_ms": 0.0304,
+            "per_jet_us": 6.075
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5997,
+            "std_ms": 0.0837,
+            "per_jet_us": 2.343
+          },
+          "core_blocks": {
+            "mean_ms": 20.0564,
+            "std_ms": 0.2118,
+            "per_jet_us": 78.345
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.237,
+            "std_ms": 0.039,
+            "per_jet_us": 0.926
+          },
+          "total": {
+            "mean_ms": 114.9553,
+            "std_ms": 0.8933,
+            "per_jet_us": 449.044
+          },
+          "coverage_pct": 100.2
+        },
+        "512": {
+          "batch_size": 128,
+          "preprocessing": {
+            "mean_ms": 46.6242,
+            "std_ms": 0.394,
+            "per_jet_us": 364.252
+          },
+          "embedding": {
+            "mean_ms": 1.5483,
+            "std_ms": 0.0215,
+            "per_jet_us": 12.096
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5885,
+            "std_ms": 0.0181,
+            "per_jet_us": 4.597
+          },
+          "core_blocks": {
+            "mean_ms": 19.7228,
+            "std_ms": 0.0325,
+            "per_jet_us": 154.084
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2351,
+            "std_ms": 0.0398,
+            "per_jet_us": 1.837
+          },
+          "total": {
+            "mean_ms": 68.3939,
+            "std_ms": 0.439,
+            "per_jet_us": 534.328
+          },
+          "coverage_pct": 100.5
+        },
+        "1024": {
+          "batch_size": 64,
+          "preprocessing": {
+            "mean_ms": 23.5498,
+            "std_ms": 0.2153,
+            "per_jet_us": 367.966
+          },
+          "embedding": {
+            "mean_ms": 1.5449,
+            "std_ms": 0.016,
+            "per_jet_us": 24.14
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5832,
+            "std_ms": 0.0169,
+            "per_jet_us": 9.112
+          },
+          "core_blocks": {
+            "mean_ms": 19.7304,
+            "std_ms": 0.0654,
+            "per_jet_us": 308.288
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2377,
+            "std_ms": 0.0645,
+            "per_jet_us": 3.714
+          },
+          "total": {
+            "mean_ms": 45.4069,
+            "std_ms": 0.3065,
+            "per_jet_us": 709.483
+          },
+          "coverage_pct": 100.5
+        }
+      }
+    },
+    "jetmamba_rel": {
+      "name": "JetMamba-Rel",
+      "variant": "v1.3",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.3515,
+            "std_ms": 2.1736,
+            "per_jet_us": 363.968
+          },
+          "embedding": {
+            "mean_ms": 0.6915,
+            "std_ms": 0.4152,
+            "per_jet_us": 1.351
+          },
+          "positional_encoding": {
+            "mean_ms": 0.3747,
+            "std_ms": 0.0629,
+            "per_jet_us": 0.732
+          },
+          "relational": {
+            "mean_ms": 1.3663,
+            "std_ms": 0.0634,
+            "per_jet_us": 2.669
+          },
+          "core_blocks": {
+            "mean_ms": 21.5927,
+            "std_ms": 0.1116,
+            "per_jet_us": 42.173
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2614,
+            "std_ms": 0.0972,
+            "per_jet_us": 0.511
+          },
+          "total": {
+            "mean_ms": 210.9877,
+            "std_ms": 3.1055,
+            "per_jet_us": 412.085
+          },
+          "coverage_pct": 99.8
+        },
+        "64": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.6094,
+            "std_ms": 2.7649,
+            "per_jet_us": 364.472
+          },
+          "embedding": {
+            "mean_ms": 0.9055,
+            "std_ms": 0.1232,
+            "per_jet_us": 1.769
+          },
+          "positional_encoding": {
+            "mean_ms": 0.4079,
+            "std_ms": 0.117,
+            "per_jet_us": 0.797
+          },
+          "relational": {
+            "mean_ms": 2.1064,
+            "std_ms": 0.0928,
+            "per_jet_us": 4.114
+          },
+          "core_blocks": {
+            "mean_ms": 23.9239,
+            "std_ms": 0.1866,
+            "per_jet_us": 46.726
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2492,
+            "std_ms": 0.0993,
+            "per_jet_us": 0.487
+          },
+          "total": {
+            "mean_ms": 212.5606,
+            "std_ms": 1.9264,
+            "per_jet_us": 415.157
+          },
+          "coverage_pct": 100.8
+        },
+        "128": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 187.6419,
+            "std_ms": 1.2494,
+            "per_jet_us": 366.488
+          },
+          "embedding": {
+            "mean_ms": 1.5916,
+            "std_ms": 0.0753,
+            "per_jet_us": 3.109
+          },
+          "positional_encoding": {
+            "mean_ms": 0.6039,
+            "std_ms": 0.0467,
+            "per_jet_us": 1.179
+          },
+          "relational": {
+            "mean_ms": 3.6085,
+            "std_ms": 0.048,
+            "per_jet_us": 7.048
+          },
+          "core_blocks": {
+            "mean_ms": 24.7683,
+            "std_ms": 0.0581,
+            "per_jet_us": 48.376
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2344,
+            "std_ms": 0.0088,
+            "per_jet_us": 0.458
+          },
+          "total": {
+            "mean_ms": 222.0334,
+            "std_ms": 7.5671,
+            "per_jet_us": 433.659
+          },
+          "coverage_pct": 98.4
+        },
+        "256": {
+          "batch_size": 256,
+          "preprocessing": {
+            "mean_ms": 94.059,
+            "std_ms": 0.9257,
+            "per_jet_us": 367.418
+          },
+          "embedding": {
+            "mean_ms": 1.5639,
+            "std_ms": 0.0381,
+            "per_jet_us": 6.109
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5908,
+            "std_ms": 0.0164,
+            "per_jet_us": 2.308
+          },
+          "relational": {
+            "mean_ms": 3.586,
+            "std_ms": 0.0329,
+            "per_jet_us": 14.008
+          },
+          "core_blocks": {
+            "mean_ms": 20.0411,
+            "std_ms": 0.0391,
+            "per_jet_us": 78.286
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2451,
+            "std_ms": 0.0525,
+            "per_jet_us": 0.957
+          },
+          "total": {
+            "mean_ms": 119.4131,
+            "std_ms": 0.5898,
+            "per_jet_us": 466.457
+          },
+          "coverage_pct": 100.6
+        },
+        "512": {
+          "batch_size": 128,
+          "preprocessing": {
+            "mean_ms": 47.3116,
+            "std_ms": 0.3582,
+            "per_jet_us": 369.622
+          },
+          "embedding": {
+            "mean_ms": 1.5483,
+            "std_ms": 0.0161,
+            "per_jet_us": 12.096
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5997,
+            "std_ms": 0.0796,
+            "per_jet_us": 4.685
+          },
+          "relational": {
+            "mean_ms": 3.607,
+            "std_ms": 0.0662,
+            "per_jet_us": 28.18
+          },
+          "core_blocks": {
+            "mean_ms": 19.7764,
+            "std_ms": 0.2324,
+            "per_jet_us": 154.503
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2351,
+            "std_ms": 0.0246,
+            "per_jet_us": 1.837
+          },
+          "total": {
+            "mean_ms": 72.2926,
+            "std_ms": 0.4021,
+            "per_jet_us": 564.786
+          },
+          "coverage_pct": 101.1
+        },
+        "1024": {
+          "batch_size": 64,
+          "preprocessing": {
+            "mean_ms": 23.865,
+            "std_ms": 0.3488,
+            "per_jet_us": 372.89
+          },
+          "embedding": {
+            "mean_ms": 1.5566,
+            "std_ms": 0.0378,
+            "per_jet_us": 24.323
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5832,
+            "std_ms": 0.0438,
+            "per_jet_us": 9.113
+          },
+          "relational": {
+            "mean_ms": 3.6027,
+            "std_ms": 0.042,
+            "per_jet_us": 56.292
+          },
+          "core_blocks": {
+            "mean_ms": 19.7283,
+            "std_ms": 0.0547,
+            "per_jet_us": 308.254
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2296,
+            "std_ms": 0.0093,
+            "per_jet_us": 3.587
+          },
+          "total": {
+            "mean_ms": 48.865,
+            "std_ms": 0.1903,
+            "per_jet_us": 763.515
+          },
+          "coverage_pct": 101.4
+        }
+      }
+    },
+    "jetmamba_hybrid": {
+      "name": "JetMamba-Hybrid",
+      "variant": "v2.1",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 185.6827,
+            "std_ms": 1.27,
+            "per_jet_us": 362.661
+          },
+          "embedding": {
+            "mean_ms": 0.5671,
+            "std_ms": 0.0616,
+            "per_jet_us": 1.108
+          },
+          "positional_encoding": {
+            "mean_ms": 0.347,
+            "std_ms": 0.0248,
+            "per_jet_us": 0.678
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 22.4488,
+            "std_ms": 0.1316,
+            "per_jet_us": 43.845
+          },
+          "core_blocks_attention": {
+            "mean_ms": 2.5716,
+            "std_ms": 0.0581,
+            "per_jet_us": 5.023
+          },
+          "core_blocks": {
+            "mean_ms": 25.0204,
+            "std_ms": 0.1737,
+            "per_jet_us": 48.868
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2412,
+            "std_ms": 0.0523,
+            "per_jet_us": 0.471
+          },
+          "total": {
+            "mean_ms": 209.3931,
+            "std_ms": 1.989,
+            "per_jet_us": 408.971
+          },
+          "coverage_pct": 101.2
+        },
+        "64": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.8201,
+            "std_ms": 2.0008,
+            "per_jet_us": 364.883
+          },
+          "embedding": {
+            "mean_ms": 0.8862,
+            "std_ms": 0.0772,
+            "per_jet_us": 1.731
+          },
+          "positional_encoding": {
+            "mean_ms": 0.388,
+            "std_ms": 0.0227,
+            "per_jet_us": 0.758
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 24.3268,
+            "std_ms": 0.102,
+            "per_jet_us": 47.513
+          },
+          "core_blocks_attention": {
+            "mean_ms": 2.8903,
+            "std_ms": 0.0615,
+            "per_jet_us": 5.645
+          },
+          "core_blocks": {
+            "mean_ms": 27.2171,
+            "std_ms": 0.1591,
+            "per_jet_us": 53.158
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2417,
+            "std_ms": 0.0469,
+            "per_jet_us": 0.472
+          },
+          "total": {
+            "mean_ms": 213.382,
+            "std_ms": 1.4241,
+            "per_jet_us": 416.762
+          },
+          "coverage_pct": 101.0
+        },
+        "128": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 186.4475,
+            "std_ms": 0.9655,
+            "per_jet_us": 364.155
+          },
+          "embedding": {
+            "mean_ms": 1.5702,
+            "std_ms": 0.0399,
+            "per_jet_us": 3.067
+          },
+          "positional_encoding": {
+            "mean_ms": 0.593,
+            "std_ms": 0.0201,
+            "per_jet_us": 1.158
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 24.9711,
+            "std_ms": 0.0791,
+            "per_jet_us": 48.772
+          },
+          "core_blocks_attention": {
+            "mean_ms": 4.3954,
+            "std_ms": 0.0588,
+            "per_jet_us": 8.585
+          },
+          "core_blocks": {
+            "mean_ms": 29.3665,
+            "std_ms": 0.1079,
+            "per_jet_us": 57.356
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.2514,
+            "std_ms": 0.0926,
+            "per_jet_us": 0.491
+          },
+          "total": {
+            "mean_ms": 218.0029,
+            "std_ms": 2.7371,
+            "per_jet_us": 425.787
+          },
+          "coverage_pct": 100.1
+        },
+        "256": {
+          "batch_size": 256,
+          "preprocessing": {
+            "mean_ms": 93.5959,
+            "std_ms": 0.6771,
+            "per_jet_us": 365.609
+          },
+          "embedding": {
+            "mean_ms": 1.5584,
+            "std_ms": 0.0283,
+            "per_jet_us": 6.088
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5921,
+            "std_ms": 0.0169,
+            "per_jet_us": 2.313
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 20.2588,
+            "std_ms": 0.1569,
+            "per_jet_us": 79.136
+          },
+          "core_blocks_attention": {
+            "mean_ms": 4.3982,
+            "std_ms": 0.1382,
+            "per_jet_us": 17.18
+          },
+          "core_blocks": {
+            "mean_ms": 24.657,
+            "std_ms": 0.2749,
+            "per_jet_us": 96.316
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.232,
+            "std_ms": 0.0088,
+            "per_jet_us": 0.906
+          },
+          "total": {
+            "mean_ms": 119.9963,
+            "std_ms": 1.0297,
+            "per_jet_us": 468.736
+          },
+          "coverage_pct": 100.5
+        },
+        "512": {
+          "batch_size": 128,
+          "preprocessing": {
+            "mean_ms": 47.0082,
+            "std_ms": 0.4687,
+            "per_jet_us": 367.252
+          },
+          "embedding": {
+            "mean_ms": 1.5589,
+            "std_ms": 0.0315,
+            "per_jet_us": 12.179
+          },
+          "positional_encoding": {
+            "mean_ms": 0.5879,
+            "std_ms": 0.0173,
+            "per_jet_us": 4.593
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 19.9447,
+            "std_ms": 0.1601,
+            "per_jet_us": 155.818
+          },
+          "core_blocks_attention": {
+            "mean_ms": 4.383,
+            "std_ms": 0.1228,
+            "per_jet_us": 34.243
+          },
+          "core_blocks": {
+            "mean_ms": 24.3277,
+            "std_ms": 0.2778,
+            "per_jet_us": 190.06
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.232,
+            "std_ms": 0.0138,
+            "per_jet_us": 1.812
+          },
+          "total": {
+            "mean_ms": 72.8585,
+            "std_ms": 0.3396,
+            "per_jet_us": 569.207
+          },
+          "coverage_pct": 101.2
+        },
+        "1024": {
+          "batch_size": 64,
+          "preprocessing": {
+            "mean_ms": 23.8541,
+            "std_ms": 0.2573,
+            "per_jet_us": 372.721
+          },
+          "embedding": {
+            "mean_ms": 1.5507,
+            "std_ms": 0.0241,
+            "per_jet_us": 24.23
+          },
+          "positional_encoding": {
+            "mean_ms": 0.6104,
+            "std_ms": 0.0968,
+            "per_jet_us": 9.537
+          },
+          "core_blocks_mamba": {
+            "mean_ms": 19.9602,
+            "std_ms": 0.198,
+            "per_jet_us": 311.878
+          },
+          "core_blocks_attention": {
+            "mean_ms": 4.3798,
+            "std_ms": 0.1327,
+            "per_jet_us": 68.435
+          },
+          "core_blocks": {
+            "mean_ms": 24.34,
+            "std_ms": 0.3292,
+            "per_jet_us": 380.313
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.228,
+            "std_ms": 0.0089,
+            "per_jet_us": 3.563
+          },
+          "total": {
+            "mean_ms": 50.0583,
+            "std_ms": 0.6962,
+            "per_jet_us": 782.162
+          },
+          "coverage_pct": 101.0
+        }
+      }
+    },
+    "ParT": {
+      "name": "ParT",
+      "variant": "ParT",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 0.1638,
+            "std_ms": 0.0122,
+            "per_jet_us": 0.32
+          },
+          "embedding": {
+            "mean_ms": 0.6484,
+            "std_ms": 0.014,
+            "per_jet_us": 1.266
+          },
+          "pair_embed": {
+            "mean_ms": 9.0506,
+            "std_ms": 39.9498,
+            "per_jet_us": 17.677
+          },
+          "core_blocks": {
+            "mean_ms": 6.3446,
+            "std_ms": 0.4087,
+            "per_jet_us": 12.392
+          },
+          "cls_blocks": {
+            "mean_ms": 1.8394,
+            "std_ms": 0.3908,
+            "per_jet_us": 3.593
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1123,
+            "std_ms": 0.0046,
+            "per_jet_us": 0.219
+          },
+          "total": {
+            "mean_ms": 16.1391,
+            "std_ms": 0.0404,
+            "per_jet_us": 31.522
+          },
+          "coverage_pct": 112.5
+        },
+        "64": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 0.1678,
+            "std_ms": 0.0325,
+            "per_jet_us": 0.328
+          },
+          "embedding": {
+            "mean_ms": 1.12,
+            "std_ms": 0.0105,
+            "per_jet_us": 2.188
+          },
+          "pair_embed": {
+            "mean_ms": 12.3014,
+            "std_ms": 39.0921,
+            "per_jet_us": 24.026
+          },
+          "core_blocks": {
+            "mean_ms": 14.0653,
+            "std_ms": 0.0769,
+            "per_jet_us": 27.471
+          },
+          "cls_blocks": {
+            "mean_ms": 1.7921,
+            "std_ms": 0.0982,
+            "per_jet_us": 3.5
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1136,
+            "std_ms": 0.0044,
+            "per_jet_us": 0.222
+          },
+          "total": {
+            "mean_ms": 32.629,
+            "std_ms": 0.0614,
+            "per_jet_us": 63.729
+          },
+          "coverage_pct": 90.6
+        },
+        "128": {
+          "batch_size": 512,
+          "preprocessing": {
+            "mean_ms": 0.1672,
+            "std_ms": 0.0147,
+            "per_jet_us": 0.327
+          },
+          "embedding": {
+            "mean_ms": 2.1266,
+            "std_ms": 0.0101,
+            "per_jet_us": 4.154
+          },
+          "pair_embed": {
+            "mean_ms": 31.9854,
+            "std_ms": 42.2909,
+            "per_jet_us": 62.471
+          },
+          "core_blocks": {
+            "mean_ms": 36.491,
+            "std_ms": 0.0606,
+            "per_jet_us": 71.271
+          },
+          "cls_blocks": {
+            "mean_ms": 1.7938,
+            "std_ms": 0.1036,
+            "per_jet_us": 3.504
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1129,
+            "std_ms": 0.0047,
+            "per_jet_us": 0.22
+          },
+          "total": {
+            "mean_ms": 80.3505,
+            "std_ms": 0.0712,
+            "per_jet_us": 156.935
+          },
+          "coverage_pct": 90.4
+        },
+        "256": {
+          "batch_size": 128,
+          "preprocessing": {
+            "mean_ms": 0.1667,
+            "std_ms": 0.0272,
+            "per_jet_us": 1.303
+          },
+          "embedding": {
+            "mean_ms": 1.1223,
+            "std_ms": 0.0117,
+            "per_jet_us": 8.768
+          },
+          "pair_embed": {
+            "mean_ms": 25.8038,
+            "std_ms": 0.0204,
+            "per_jet_us": 201.592
+          },
+          "core_blocks": {
+            "mean_ms": 27.7269,
+            "std_ms": 0.09,
+            "per_jet_us": 216.616
+          },
+          "cls_blocks": {
+            "mean_ms": 1.7856,
+            "std_ms": 0.0822,
+            "per_jet_us": 13.95
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1133,
+            "std_ms": 0.0051,
+            "per_jet_us": 0.885
+          },
+          "total": {
+            "mean_ms": 64.3397,
+            "std_ms": 0.0462,
+            "per_jet_us": 502.654
+          },
+          "coverage_pct": 88.2
+        },
+        "512": {
+          "batch_size": 64,
+          "preprocessing": {
+            "mean_ms": 0.1654,
+            "std_ms": 0.0144,
+            "per_jet_us": 2.585
+          },
+          "embedding": {
+            "mean_ms": 1.1237,
+            "std_ms": 0.0149,
+            "per_jet_us": 17.558
+          },
+          "pair_embed": {
+            "mean_ms": 45.3329,
+            "std_ms": 0.0292,
+            "per_jet_us": 708.326
+          },
+          "core_blocks": {
+            "mean_ms": 45.4527,
+            "std_ms": 0.1558,
+            "per_jet_us": 710.199
+          },
+          "cls_blocks": {
+            "mean_ms": 1.7946,
+            "std_ms": 0.387,
+            "per_jet_us": 28.041
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1115,
+            "std_ms": 0.0045,
+            "per_jet_us": 1.741
+          },
+          "total": {
+            "mean_ms": 112.1509,
+            "std_ms": 0.1169,
+            "per_jet_us": 1752.358
+          },
+          "coverage_pct": 83.8
+        },
+        "1024": {
+          "batch_size": 32,
+          "preprocessing": {
+            "mean_ms": 0.1775,
+            "std_ms": 0.0345,
+            "per_jet_us": 5.546
+          },
+          "embedding": {
+            "mean_ms": 1.1327,
+            "std_ms": 0.0242,
+            "per_jet_us": 35.398
+          },
+          "pair_embed": {
+            "mean_ms": 91.8435,
+            "std_ms": 0.0157,
+            "per_jet_us": 2870.109
+          },
+          "core_blocks": {
+            "mean_ms": 79.56,
+            "std_ms": 0.1519,
+            "per_jet_us": 2486.25
+          },
+          "cls_blocks": {
+            "mean_ms": 1.8313,
+            "std_ms": 0.3065,
+            "per_jet_us": 57.228
+          },
+          "pooling_classifier": {
+            "mean_ms": 0.1143,
+            "std_ms": 0.0111,
+            "per_jet_us": 3.572
+          },
+          "total": {
+            "mean_ms": 208.3158,
+            "std_ms": 0.1319,
+            "per_jet_us": 6509.869
+          },
+          "coverage_pct": 83.8
+        }
+      }
+    }
+  }
+}

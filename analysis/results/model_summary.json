@@ -1,0 +1,32 @@
+{
+  "jetmamba_unidir": {
+    "name": "JetMamba-UniDir",
+    "total_params": 1096451,
+    "trainable_params": 1096451,
+    "flops": 11962880
+  },
+  "jetmamba_bidir": {
+    "name": "JetMamba-BiDir",
+    "total_params": 2817795,
+    "trainable_params": 2817795,
+    "flops": 23431680
+  },
+  "jetmamba_rel": {
+    "name": "JetMamba-Rel",
+    "total_params": 2830734,
+    "trainable_params": 2830734,
+    "flops": 24248832
+  },
+  "jetmamba_hybrid": {
+    "name": "JetMamba-Hybrid",
+    "total_params": 3412611,
+    "trainable_params": 3412611,
+    "flops": 25004544
+  },
+  "ParT": {
+    "name": "ParT",
+    "total_params": 2143934,
+    "trainable_params": 2143934,
+    "flops": 503876096
+  }
+}

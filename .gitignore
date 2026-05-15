@@ -1,5 +1,12 @@
 .DS_Store
 
+# Large binary data (not tracked)
+datasets/
+*.pt
+Jim_results/
+logs/
+runs/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

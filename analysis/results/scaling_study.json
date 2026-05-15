@@ -1,0 +1,257 @@
+{
+  "metadata": {
+    "sequence_lengths": [
+      32,
+      64,
+      128,
+      256,
+      512,
+      1024
+    ],
+    "warmup_batches": 5,
+    "timed_batches": 50,
+    "device": "cuda:0",
+    "gpu_name": "NVIDIA A100-SXM4-40GB",
+    "gpu_memory_gb": 39.4,
+    "torch_version": "2.2.0",
+    "cuda_version": "11.8",
+    "timestamp": "2026-05-13 17:34:21"
+  },
+  "models": {
+    "jetmamba_unidir": {
+      "name": "JetMamba-UniDir",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 205.0889,
+          "std_ms_per_batch": 7.6755,
+          "per_jet_latency_us": 400.564,
+          "throughput_jets_per_sec": 2496.5
+        },
+        "64": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 203.9108,
+          "std_ms_per_batch": 7.2583,
+          "per_jet_latency_us": 398.263,
+          "throughput_jets_per_sec": 2510.9
+        },
+        "128": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 205.5459,
+          "std_ms_per_batch": 6.8102,
+          "per_jet_latency_us": 401.457,
+          "throughput_jets_per_sec": 2490.9
+        },
+        "256": {
+          "batch_size": 256,
+          "avg_ms_per_batch": 106.801,
+          "std_ms_per_batch": 0.6368,
+          "per_jet_latency_us": 417.191,
+          "throughput_jets_per_sec": 2397.0
+        },
+        "512": {
+          "batch_size": 128,
+          "avg_ms_per_batch": 60.2246,
+          "std_ms_per_batch": 4.1192,
+          "per_jet_latency_us": 470.505,
+          "throughput_jets_per_sec": 2125.4
+        },
+        "1024": {
+          "batch_size": 64,
+          "avg_ms_per_batch": 35.8951,
+          "std_ms_per_batch": 1.4559,
+          "per_jet_latency_us": 560.862,
+          "throughput_jets_per_sec": 1783.0
+        }
+      }
+    },
+    "jetmamba_bidir": {
+      "name": "JetMamba-BiDir",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 212.1003,
+          "std_ms_per_batch": 7.3678,
+          "per_jet_latency_us": 414.258,
+          "throughput_jets_per_sec": 2414.0
+        },
+        "64": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 215.5191,
+          "std_ms_per_batch": 7.383,
+          "per_jet_latency_us": 420.936,
+          "throughput_jets_per_sec": 2375.7
+        },
+        "128": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 217.1561,
+          "std_ms_per_batch": 6.2433,
+          "per_jet_latency_us": 424.133,
+          "throughput_jets_per_sec": 2357.8
+        },
+        "256": {
+          "batch_size": 256,
+          "avg_ms_per_batch": 118.2342,
+          "std_ms_per_batch": 5.8013,
+          "per_jet_latency_us": 461.852,
+          "throughput_jets_per_sec": 2165.2
+        },
+        "512": {
+          "batch_size": 128,
+          "avg_ms_per_batch": 69.6693,
+          "std_ms_per_batch": 1.1655,
+          "per_jet_latency_us": 544.292,
+          "throughput_jets_per_sec": 1837.3
+        },
+        "1024": {
+          "batch_size": 64,
+          "avg_ms_per_batch": 45.9386,
+          "std_ms_per_batch": 0.3964,
+          "per_jet_latency_us": 717.79,
+          "throughput_jets_per_sec": 1393.2
+        }
+      }
+    },
+    "jetmamba_rel": {
+      "name": "JetMamba-Rel",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 212.8262,
+          "std_ms_per_batch": 7.2524,
+          "per_jet_latency_us": 415.676,
+          "throughput_jets_per_sec": 2405.7
+        },
+        "64": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 216.837,
+          "std_ms_per_batch": 6.8598,
+          "per_jet_latency_us": 423.51,
+          "throughput_jets_per_sec": 2361.2
+        },
+        "128": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 220.7147,
+          "std_ms_per_batch": 7.3908,
+          "per_jet_latency_us": 431.083,
+          "throughput_jets_per_sec": 2319.7
+        },
+        "256": {
+          "batch_size": 256,
+          "avg_ms_per_batch": 121.8933,
+          "std_ms_per_batch": 4.7326,
+          "per_jet_latency_us": 476.146,
+          "throughput_jets_per_sec": 2100.2
+        },
+        "512": {
+          "batch_size": 128,
+          "avg_ms_per_batch": 72.692,
+          "std_ms_per_batch": 0.4188,
+          "per_jet_latency_us": 567.907,
+          "throughput_jets_per_sec": 1760.9
+        },
+        "1024": {
+          "batch_size": 64,
+          "avg_ms_per_batch": 48.9756,
+          "std_ms_per_batch": 0.2409,
+          "per_jet_latency_us": 765.244,
+          "throughput_jets_per_sec": 1306.8
+        }
+      }
+    },
+    "jetmamba_hybrid": {
+      "name": "JetMamba-Hybrid",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 213.2404,
+          "std_ms_per_batch": 4.5457,
+          "per_jet_latency_us": 416.485,
+          "throughput_jets_per_sec": 2401.0
+        },
+        "64": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 216.8402,
+          "std_ms_per_batch": 4.6872,
+          "per_jet_latency_us": 423.516,
+          "throughput_jets_per_sec": 2361.2
+        },
+        "128": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 222.4709,
+          "std_ms_per_batch": 5.3563,
+          "per_jet_latency_us": 434.514,
+          "throughput_jets_per_sec": 2301.4
+        },
+        "256": {
+          "batch_size": 256,
+          "avg_ms_per_batch": 122.8408,
+          "std_ms_per_batch": 6.3713,
+          "per_jet_latency_us": 479.847,
+          "throughput_jets_per_sec": 2084.0
+        },
+        "512": {
+          "batch_size": 128,
+          "avg_ms_per_batch": 73.9558,
+          "std_ms_per_batch": 1.0257,
+          "per_jet_latency_us": 577.78,
+          "throughput_jets_per_sec": 1730.8
+        },
+        "1024": {
+          "batch_size": 64,
+          "avg_ms_per_batch": 50.0398,
+          "std_ms_per_batch": 0.4279,
+          "per_jet_latency_us": 781.872,
+          "throughput_jets_per_sec": 1279.0
+        }
+      }
+    },
+    "ParT": {
+      "name": "ParT",
+      "scaling": {
+        "32": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 16.1789,
+          "std_ms_per_batch": 0.1648,
+          "per_jet_latency_us": 31.599,
+          "throughput_jets_per_sec": 31646.2
+        },
+        "64": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 32.588,
+          "std_ms_per_batch": 0.0695,
+          "per_jet_latency_us": 63.648,
+          "throughput_jets_per_sec": 15711.3
+        },
+        "128": {
+          "batch_size": 512,
+          "avg_ms_per_batch": 80.2977,
+          "std_ms_per_batch": 0.1277,
+          "per_jet_latency_us": 156.832,
+          "throughput_jets_per_sec": 6376.3
+        },
+        "256": {
+          "batch_size": 128,
+          "avg_ms_per_batch": 64.318,
+          "std_ms_per_batch": 0.2,
+          "per_jet_latency_us": 502.485,
+          "throughput_jets_per_sec": 1990.1
+        },
+        "512": {
+          "batch_size": 64,
+          "avg_ms_per_batch": 112.1504,
+          "std_ms_per_batch": 0.1765,
+          "per_jet_latency_us": 1752.35,
+          "throughput_jets_per_sec": 570.7
+        },
+        "1024": {
+          "batch_size": 32,
+          "avg_ms_per_batch": 208.0773,
+          "std_ms_per_batch": 0.1462,
+          "per_jet_latency_us": 6502.417,
+          "throughput_jets_per_sec": 153.8
+        }
+      }
+    }
+  }
+}
